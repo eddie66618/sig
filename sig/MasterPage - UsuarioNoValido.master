@@ -1,0 +1,292 @@
+﻿<%@ master language="VB" inherits="MasterPage, App_Web_ortasmds" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Gestión</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/AC_RunActiveContent.js" type="text/javascript">
+    </script>
+    <script type="text/javascript" language="javascript">
+        function mostrar()
+        {
+            if (oculta.style.display == "none")
+            {
+                oculta.style.display = "block";
+            }
+            else
+            {
+                oculta.style.display = "none";
+            };
+ 
+        }
+    
+        function mostrarMarcar()
+        {
+            var ref1=document.getElementById("ref1");
+            var ref2=document.getElementById("ref2");
+            var ref3=document.getElementById("ref3");
+            var ref4=document.getElementById("ref4");
+            var ref5=document.getElementById("ref5");
+            var ref6=document.getElementById("ref6");
+            var ref7=document.getElementById("ref7");
+            var ref8=document.getElementById("ref8");
+            var ref9=document.getElementById("ref9");
+            var ref10=document.getElementById("ref10");               
+            var result;
+	        var url = location.href;
+            var index = url.indexOf("?");
+            
+            if (index == -1)
+            {
+                result = "0";
+            }
+            else
+            {
+                index = url.indexOf("=",index);
+                result = url.charAt(index + 1);
+                result = result + url.charAt(index + 2);
+                
+            };
+             
+            if (result!="0")
+            {
+                if (result=="01")
+                {   
+                    ref1.style.color="#FE7E02";
+                    ref1.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="02")
+                {   
+                    ref2.style.color="#FE7E02";
+                    ref2.style.textDecorationUnderline = "true";
+                    
+                }
+                 if (result=="03")
+                {   
+    //                servicios.style.color="white";              
+    //                recaudaciones.style.color="#FE7E02";
+    //                recaudaciones.style.textDecorationUnderline = "true";
+                    ref3.style.color="#FE7E02";
+                    ref3.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="04")
+                {   
+                    
+                    ref4.style.color="#FE7E02";
+                    ref4.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="05")
+                {   
+                    
+                    ref5.style.color="#FE7E02";
+                    ref5.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="06")
+                {   
+                    
+                    ref6.style.color="#FE7E02";
+                    ref6.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="07")
+                {   
+                    ref1.style.color="#FE7E02";
+                    ref1.style.textDecorationUnderline = "true";
+                    ref7.style.color="#FE7E02";
+                    ref7.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="08")
+                {   
+                    ref1.style.color="#FE7E02";
+                    ref1.style.textDecorationUnderline = "true";
+                    ref8.style.color="#FE7E02";
+                    ref8.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="09")
+                {   
+                    ref1.style.color="#FE7E02";
+                    ref1.style.textDecorationUnderline = "true";
+                    ref9.style.color="#FE7E02";
+                    ref9.style.textDecorationUnderline = "true";
+                    
+                }
+                if (result=="10")
+                {   
+                    ref1.style.color="#FE7E02";
+                    ref1.style.textDecorationUnderline = "true";
+                    ref10.style.color="#FE7E02";
+                    ref10.style.textDecorationUnderline = "true";
+                    
+                }         
+            }
+        }   
+        
+    </script>
+    <style type="text/css">
+        .auto-style1 {
+            color: #FFFFFF;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin:0px; background-image: url(IMG/bg_andes.jpg)">
+
+    <form id="form1" runat="server">
+    <div>
+        <div style="text-align: center">
+            <div style="text-align: center" title="SIG CRAC LASA">
+                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+                    <tr>
+                        <td align="left" rowspan="2" style="width: 30px; height: 105px" valign="top">
+                            <asp:Image ID="Image3" runat="server" Height="105px" ImageUrl="~/IMG/px_trans.gif"
+                                Width="30px" /></td>
+                        <td align="left" style="height: 77px" valign="top" colspan="2">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/IMG/andes_titulo.jpg" /></td>
+                        <td align="right" style="width: 170px; height: 77px" valign="middle">
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/IMG/logo_caja%20los%20andes.png" Width="230px" /></td>
+                        <td align="right" rowspan="2" style="width: 25px; height: 105px" valign="top">
+                            <asp:Image ID="Image4" runat="server" Height="105px" ImageUrl="~/IMG/px_trans.gif"
+                                Width="25px" /></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" style=" width:100%; height: 28px; background-image: url('IMG/bg_lineAndes.gif'); text-align: left;">&nbsp;<img alt="" src="IMG/vin01.gif" width="6" height="8" align="bottom"/>
+		                    <a id="ref1" href="UsuarioNoValido.aspx?id1=01" class="menu1">Gerencia General</a>&nbsp;
+		                    <img alt="" src="IMG/vin01.gif" width="6" height="8" align="bottom"/>
+                            <a id="ref2" href="UsuarioNoValido.aspx?id1=02" class="menu1">Gerencia Negocios</a>&nbsp;
+		                    <img alt="" src="IMG/vin01.gif" width="6" height="8" align="bottom"/>
+                            <a id="ref3" href="UsuarioNoValido.aspx?id1=03" class="menu1">Gerencia Planeamiento Comercial</a>&nbsp;
+                            <img alt="" src="IMG/vin01.gif" width="6" height="8" align="bottom"/>
+                            <a id="ref4" href="UsuarioNoValido.aspx?id1=04" class="menu1">Gerencia Planeamiento & Control de Gestión </a>&nbsp;
+                            <img alt="" src="IMG/vin01.gif" width="6" height="8" align="bottom"/>
+                            <a id="ref6" href="UsuarioNoValido.aspx?id1=05" class="menu1">Talento Humano</a>&nbsp;
+                        </td>&nbsp;
+                            <td align="right" style="width: 170px; height: 28px; background-image: url(IMG/bg_lineAndes.gif);" valign="top"> 
+					        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/IMG/btn_principalAndes.gif" ToolTip="Página Principal" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width:2%; height: 100%;" valign="middle">
+                           </td>
+                        <td colspan="3" style="background-position: center top; height: 100%; width: 100%; background-color: white;" align="left" valign="top">
+                        <%  If id1 = "01" Then%>
+					        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					          <tr>
+						        <td style="background-image: url(IMG/menuandes.jpg); height: 19px;">
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A1" href="UsuarioNoValido.aspx?id1=01" class="menu1">Tablero Gerencial</a>
+                                 </td>   
+						     </tr> 
+ 
+    				        </table> 		
+			            <%  End If %>
+			            <%  If id1 = "02" Then%>
+					        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					          <tr>
+						        <td style="background-image: url(IMG/menuandes.jpg); height: 19px;">
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A3" href="UsuarioNoValido.aspx?id1=02" class="menu1">Cartera Diaria</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A4" href="UsuarioNoValido.aspx?id1=02" class="menu1">Plan de Venta Potencial</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A5" href="UsuarioNoValido.aspx?id1=02" class="menu1">Sistema de Incentivos</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A6" href="UsuarioNoValido.aspx?id1=02" class="menu1">Amortizaciones</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A7" href="UsuarioNoValido.aspx?id1=02" class="menu1">Evolutivo Diario</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A8" href="UsuarioNoValido.aspx?id1=02" class="menu1">Evolutivo Mensual</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A9" href="UsuarioNoValido.aspx?id1=02" class="menu1">Productividad</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A10" href="UsuarioNoValido.aspx?id1=02" class="menu1">Cosechas</a>&nbsp;
+                                </td> 
+						     </tr> 
+    				        </table> 		
+			            <%  End If %>
+			             <%  If id1 = "03" Then%>
+					        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					          <tr>
+						        <td style="background-image: url(IMG/menuandes.jpg); height: 19px;">
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A11" href="UsuarioNoValido.aspx?id1=03" class="menu1">Seguimiento Bases</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A12" href="UsuarioNoValido.aspx?id1=03" class="menu1">Proyección Cierre</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A13" href="UsuarioNoValido.aspx?id1=03" class="menu1">Concentración de Cartera</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A14" href="UsuarioNoValido.aspx?id1=03" class="menu1">Distancias</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A15" href="UsuarioNoValido.aspx?id1=03" class="menu1">Canal Rural</a>&nbsp;
+                                    &nbsp; &nbsp;<img src="IMG/vin01.gif" width="5" height="5" border="0">
+                                    <a id="A16" href="UsuarioNoValido.aspx?id1=03" class="menu1">Canal Virtual</a>&nbsp;
+                                </td> 
+						        </tr> 
+    				        </table> 		
+			            <%  End If %>
+			            <%  If id1 = "04" Then%>
+					        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					          <tr>
+						        <td style="background-image: url(IMG/menuandes.jpg); height: 19px;">
+                                    
+						            &nbsp; &nbsp;<img alt="" src="IMG/vin01.gif" width="5" height="5" border="0">
+					                <a id="A17" href="UsuarioNoValido.aspx?id1=04" class="menu1">Proyección Financiera</a>&nbsp;
+                                </td> 
+						        </tr> 
+    				        </table> 		
+			            <%  End If %>   
+                        <%  If id1 = "05" Then%>
+					        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					          <tr>
+						        <td style="background-image: url(IMG/menuandes.jpg); height: 19px;">
+						            &nbsp; &nbsp;<img alt="" src="IMG/vin01.gif" width="5" height="5" border="0">
+					                <a id="A18" href="UsuarioNoValido.aspx?id1=05" class="menu1">Categorización</a>&nbsp;
+                                 </td> 
+						        </tr> 
+    				        </table> 		
+			            <%  End If %>                         
+			           			            
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                        </asp:contentplaceholder>
+                        </td>
+                        <td style="width:2%; height: 100%;" valign="middle">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="width: 30px; height: 27px;">
+                        </td>
+                        <td align="left" style="height: 27px; background-color: #1b3a64;" valign="bottom" colspan="2" class="auto-style1">
+                            <strong><em>Gerencia de Planeamiento Comercial - Departamento de Inteligencia Comercial y Marketing</em></strong></td>
+                        <td align="right" style="width: 170px; height: 27px; background-color: #1b3a64;" valign="bottom">
+                            <asp:Image ID="Image7" runat="server" ImageUrl="~/IMG/pie_andes.png" Width="30px"/></td>
+                        <td align="right" style="width: 25px; height: 27px;">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="width: 30px; height: 18px;">
+                        </td>
+                        <td align="left" style="height: 18px" valign="bottom" colspan="2">
+                            <asp:Image ID="Image5" runat="server" ImageUrl="~/IMG/px_trans.gif" Height="18px" Width="30px" /></td>
+                        <td align="right" style="width: 170px; height: 18px" valign="bottom">
+                            </td>
+                        <td align="right" style="width: 25px; height: 18px;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <map name="map"><area shape="rect" coords="9,5,128,23" href="PrincipalOpeTC.aspx"></map> 
+    </form>
+</body>
+</html>
